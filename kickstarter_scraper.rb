@@ -12,7 +12,9 @@ require "nokogiri"
 def create_project_hash
   projects = {}
   
-  kicstarter.css
+  kicstarter.css("li.project.grid_4").each do |project|
+    title = project.css()
+  end
   
   html = File.read('fixtures/kickstarter.html')
   kickstarter = Nokogiri::HTML(html)
